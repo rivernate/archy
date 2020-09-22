@@ -19,7 +19,7 @@ fi
 tar -xzf $bootstrap_file -C /mnt
 
 # Update mirrorlist to US Mirrors
-curl https://www.archlinux.org/mirrorlist/?country=US&protocol=https&use_mirror_status=on | | sed -e 's/^#Server/Server/' -e '/^#/d' > /tmp/root.x86_64/etc/pacman.d/mirrorlist
+curl https://www.archlinux.org/mirrorlist/?country=US&protocol=https&use_mirror_status=on | sed -e 's/^#Server/Server/' -e '/^#/d' > /tmp/root.x86_64/etc/pacman.d/mirrorlist
 
 # Arch Chroot
 /tmp/root.x86_64/bin/arch-chroot /tmp/root.x86_64/
