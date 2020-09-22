@@ -4,12 +4,12 @@ set -ve
 
 bootstrap_file=archlinux-bootstrap-2020.09.01-x86_64.tar.gz
 bootstrap_url=http://mirrors.xmission.com/archlinux/iso/2020.09.01/$bootstrap_file
-sha1_sum=dead7955aeaf5e08132d4c7781947326fb7eb1a3
+sha1sum=dead7955aeaf5e08132d4c7781947326fb7eb1a3
 
 ## Start Arch install
 
 curl $bootstrap_url -O
-if echo "$sha1_sum *$bootstrap_file" | sha1_sum 
+if echo "$sha1sum *$bootstrap_file" | sha1sum
 then
   echo "Verified bootstrap sha1sum"
 else
